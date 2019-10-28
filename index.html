@@ -12,18 +12,26 @@
 </head>
 <body>
   <div class="container">
-    <header class="blue">
-      <nav class="z-depth-0 blue container">
+    <header class="white">
+      <nav class="z-depth-0 white container">
         <div class="nav-wrapper">
-          <a href="/" class="custom-brand brand-logo center white-text">matsp</a>
+          <a href="/" class="custom-brand brand-logo left primary-text">matsp</a>
           <ul class="right">
             <li>
               <a 
                 href="https://api.whatsapp.com/send?phone=5565992036262&text=Ol%C3%A1!%20Preciso%20de%20uma%20solu%C3%A7%C3%A3o.%20Basicamente%20o%20problema%20se%20resume%20a%20...">
-                <i class="material-icons ">phone</i>
+                <i class="material-icons primary-text">phone</i>
               </a>
             </li>
-            <li><i class="material-icons">email</i></li>
+            <li>
+              <a 
+                href="mailto:srmbpereira@gmail.com"
+                class="tooltipped" 
+                data-position="bottom" 
+                data-tooltip="srmbpereira@gmail.com">
+                <i class="material-icons primary-text">email</i>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -162,6 +170,85 @@
       </div>
 
     </section>
+    <section class="row services">
+      <div class="col s12">
+        <h5>Serviços</h5>
+      </div>
+      <div class="col s12 service-wrapper">
+        <div class="">
+          <div class="card-content">
+            <strong class="header">Desenvolvimento Frontend</strong>
+            <p>
+              Basicamente o desenvolvimento frontend consiste na materialização de um layout
+              idealizado por um designer, transformando-o em uma página navegável e interativa, 
+              utilizável pelo usuário final. Em resumo, consiste no desenvolvimento daquilo que 
+              é "exergado" e será usado pelo usuário.
+            </p>
+          </div>
+          <div class="card-action">
+            <!-- <a class="blue-text" href="#">Preciso desse serviço.</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col s12 service-wrapper">
+        <div class="">
+          <div class="card-content">
+            <strong class="header">Desenvolvimento Backend</strong>
+            <p>
+              Atuando "por de trás" dos panos, o desenvolvimento backend é a parte responsável pela análise de uma 
+              situação problemática, cuja solução, ou caminho para ela, é obtido através do processamento de dados brutos,
+              que tem como produto final a informação. Em resumo, é a parte responsável por analisar o domínio e Desenvolver
+              uma regra de negócio de forma a validar e contextualizar dados, criando um caminho para [ou sendo a própria] soluçao
+              para um determinado problema.
+            </p>
+          </div>
+          <div class="card-action">
+            <!-- <a class="blue-text" href="#">Preciso desse serviço.</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="row contact">
+      <div class="col s12">
+        <h5 class="type-writer">Se interessou? Me mande um email c:</h5>
+      </div>
+      <div class="col s12">
+        <form 
+          class="tooltipped" 
+          data-position="top" 
+          data-tooltip="Esse formulário ainda não está funcionando. Você pode me enviar um email direto no endereço 'srmbpereira@gmail.com'">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">person</i>
+              <input id="name" type="text">
+              <label for="name">Nome</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="text">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">info</i>
+              <input id="subject" type="text">
+              <label for="subject">Assunto</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">message</i>
+              <textarea id="message" class="materialize-textarea"></textarea>
+              <label for="message">Mensagem</label>
+            </div>
+            <div class="col s12">
+
+              <button disabled class="btn right blue white-text waves-effect waves-light" type="submit" name="action">enviar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </section>
     <section class="row main content">
       <div>
         <ul class="primary tabs">
@@ -281,7 +368,60 @@
       </div>
     </section>
     <footer>
+      <div class="row">
+        <div class="col m11 s12">
+          <h5 class="primary-text">Contato</h5>
+          <ul>
+              <li>
+                <a class="primary-text"
+                  href="mailto:srmbpereira@gmail.com">
+                  srmbpereira@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="primary-text" 
+                  href="http://api.whatsapp.com/send?1=pt_BR&phone=5565992036262">
+                  (65) 9 99203-6262
+                </a>
+              </li>
+              <li class="social">
+                <a class="primary-text" 
+                  href="https://github.com/mbpereira">
+                  <img src="./assets/img/git.svg" width="24" height="24" />
+                </a>
 
+                <a class="primary-text" 
+                  href="https://www.linkedin.com/in/mateus-brand%C3%A3o-76040a122/">
+                  <img src="./assets/img/ln.svg" width="24" height="24" />
+                </a>
+
+                <a class="primary-text"
+                  href="https://www.instagram.com/_matsp/">
+                  <img src="./assets/img/instagram.svg" width="24" height="24" />
+                </a>
+
+                <a class="primary-text" 
+                  href="https://www.facebook.com/matsp.dev">
+                  <img src="./assets/img/fb.svg" width="24" height="24" />
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="col m1 s12 right">
+          <h5 class="primary-text">Links</h5>
+          <ul>
+            <li>
+              <a class="primary-text" 
+                href="https://drive.google.com/open?id=1nTqLR7Eh7oqK6uDBLVCO16EXu9To1H4U">
+                Currículo
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="primary-text footer-copyright">
+        © 2014 Mateus Brandão Pereira
+      </div>
     </footer>
   </div>
   <script src="./assets/js/materialize.min.js"></script>

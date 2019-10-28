@@ -32,6 +32,7 @@ var methods = {
   var sliders = document.querySelectorAll(".carousel");
   var tabs = document.querySelectorAll(".tabs");
   var typeWriters = document.querySelectorAll(".type-writer");
+  var tooltips = document.querySelectorAll(".tooltipped");
 
   materialize.Carousel.init(sliders, {
     fullWidth: true,
@@ -41,6 +42,8 @@ var methods = {
   materialize.Tabs.init(tabs, {
     swipeable: true
   });
+
+  materialize.Tooltip.init(tooltips);
 
   typeWriters.forEach(function(tw) {
     methods.typeWriter(tw);

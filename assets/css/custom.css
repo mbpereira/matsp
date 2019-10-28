@@ -1,6 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+h5 {
+  font-weight: bold;
+  color: #444 !important;
+  font-size: 1.3em !important;
+}
+p, a, input, label, textarea, button{
+  font-size: 0.9em !important;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label, .materialize-textarea:focus + label {
+  color: #2196F3 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, .materialize-textarea:focus {
+  border-bottom: 1px solid #2196F3 !important;
+  box-shadow: 0 1px 0 0 #2196F3 !important;
+}
+.contact .material-icons.prefix {
+  color: #444;
+}
+.contact .material-icons.prefix.active {
+  color: #2196F3;
+}
 header {
   position: fixed;
   left: 0;
@@ -8,8 +32,20 @@ header {
   top: 0;
   z-index: 2222;
 }
-header nav ul li {
+header li {
   margin-left: 10px;
+}
+header li i {
+  font-size: 16px !important;
+}
+footer {
+  padding: 20px 0;
+}
+.container > .row {
+  min-height: 600px;
+}
+.primary-text {
+  color: #444!important;
 }
 .content {
   margin-top: 20px;
@@ -44,22 +80,21 @@ strong {
 .content {
   min-height: 80vh;
 }
-.carousel {
-  min-height: 600px;
+.carousel.carousel-slider {
+  min-height: 600px!important;
+  height: auto!important;
+}
+.carousel-item {
+  height: 100%!important;
 }
 .custom-header {
   border-bottom: 0.5px solid #d1d1d1;
 }
-.presentation-panel h5,
-.tab-content h5 {
-  font-weight: bold;
-  color: #444 !important;
-  font-size: 1.3em !important;
+.presentation > .row{
+  margin-top: 100px;
 }
-.presentation-panel p,
-.tab-content p {
-  font-size: 0.9em !important;
-}
+
+
 .custom-brand {
   font-weight: bold;
 }
@@ -71,7 +106,7 @@ img.me {
 }
 
 .carousel-actions button {
-  font-size: 8rem;
+  font-size: 8rem!important;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -133,6 +168,16 @@ img.me {
   margin: 0 2px;
 }
 
+.services .service-wrapper{
+  margin-bottom: 50px;
+}
+.services .service-wrapper a {
+  font-size: .9em;
+}
+.contact h5 {
+  height: 50px;
+}
+
 .tab-content {
   padding: 0 0.75rem;
 }
@@ -142,4 +187,7 @@ img.me {
 }
 .posts li p {
   margin-bottom: 0px;
+}
+.social {
+  margin-top: 10px;
 }
