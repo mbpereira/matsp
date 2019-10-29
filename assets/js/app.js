@@ -90,6 +90,9 @@ var methods = {
 
   function contact(e) {
     e.preventDefault();
+    
+    form.classList.add('is-sending');
+
     var elements = e.target.elements;
     var envelope = {
       email: elements.email.value,
@@ -99,7 +102,21 @@ var methods = {
     };
 
     axios.post('/contact', envelope)
-      .then(r => console.log(r))
-      .catch(err => console.log(err));
+      .then(r => {
+        form.classList.remove('is-sending');
+        form.classList.add('sended');
+      })
+      .catch(err => { 
+        form.classList.remove('is-sending');
+        form.classList.add('error');
+      })
+      .then(() => setTimeout(() => {
+        if(form.classList.contains('error'))
+          form.classList.remove('error');
+        else {
+          form.classList.remove('sended');
+          Object.keys(elements).forEach(element => elements[element].value = '');
+        }
+      }, 5000));
   }
 })(http);

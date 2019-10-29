@@ -177,6 +177,27 @@ img.me {
 .contact h5 {
   height: 50px;
 }
+.contact form button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact form button[type="submit"] img{
+  margin-left: 10px;
+  display: none;
+}
+.contact form.is-sending button[type="submit"] img {
+  display: block;
+  content: url("../img/spinner1.gif");
+}
+.contact form.sended button[type="submit"] img {
+  display: block;
+  content: url("../img/ok.gif");
+}
+.contact form.error button[type="submit"] img {
+  display: block;
+  content: url("../img/error.svg");
+}
 
 .tab-content {
   padding: 0 0.75rem;
