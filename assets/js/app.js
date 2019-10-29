@@ -67,6 +67,20 @@ var methods = {
       methods.move(to, slider);
     });
   });
+
+  window.addEventListener('scroll', reveal);
+
+  function reveal(e) {
+    var elements = document.querySelectorAll('[data-reveal]');
+
+    elements.forEach(function (el) {
+      if(scrollY >= 2/3 * el.offsetTop)
+        el.classList.add('active');
+      else
+        el.classList.remove('active');
+    });
+  }
+
 })();
 
 (function (axios) {
