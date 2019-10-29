@@ -1,5 +1,9 @@
 var materialize = M;
 
+var http = axios.create({
+  baseURL: 'https://matsp-dashboard.herokuapp.com/'
+});
+
 var methods = {
   move: function(to, slider) {
     var instance = materialize.Carousel.getInstance(
@@ -64,3 +68,24 @@ var methods = {
     });
   });
 })();
+
+(function (axios) {
+  var form = document.querySelector('#contact-form');
+  
+  form.addEventListener('submit', contact);
+
+  function contact(e) {
+    e.preventDefault();
+    var elements = e.target.elements;
+    var envelope = {
+      email: elements.email.value,
+      name: elements.name.value,
+      subject: elements.subject.value,
+      text: elements.text.value,
+    };
+
+    axios.post('/contact', envelope)
+      .then(r => console.log(r))
+      .catch(err => console.log(err));
+  }
+})(http);
