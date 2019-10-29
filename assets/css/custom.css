@@ -32,9 +32,6 @@ header {
   top: 0;
   z-index: 2222;
 }
-header li {
-  margin-left: 10px;
-}
 header li i {
   font-size: 16px !important;
 }
